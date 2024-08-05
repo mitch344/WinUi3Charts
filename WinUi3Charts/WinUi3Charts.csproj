@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>WinUi3Charts</RootNamespace>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <UseWinUI>true</UseWinUI>
+    <NoWarn>$(NoWarn);WMC0001</NoWarn>
+
+    <!-- Runtime Identifiers -->
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &gt;= 8">win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    
+    <!-- Package Information -->
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>ByteSculptorStudios LLC</Company>
+    <Authors>Mitchell Kopczyk</Authors>
+    <Description>WinUi3Charts is a custom UI library designed to enhance and streamline the development of user interfaces for WinUI 3 applications.</Description>
+    <Version>1.0.0</Version>
+
+    <!-- Package Metadata -->
+    <PackageProjectUrl>https://bytesculptorstudios.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mitch344/WinUi3Charts</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Copyright>©ByteSculptorStudios LLC</Copyright>
+    <Title>WinUi3Charts</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>WinUi3Charts;WinUi3;WPF;C#;GUI</PackageTags>
+    
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <!--
+    <None Include="..\PACKAGE_ICON.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    -->
+  </ItemGroup>
+
+  <!-- XAML files -->
+  <ItemGroup>
+    <Page Include="ResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\BarChart\BarChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ContinousGauge\ContinuousGauge.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FunnelChart\FunnelChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LineChart\LineChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PieChart\PieChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PolarChart\PolarChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Prompts\PromptView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SegmentedGauge\SegmentedGauge.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240627000" />
+      <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
+  </ItemGroup>
+</Project>

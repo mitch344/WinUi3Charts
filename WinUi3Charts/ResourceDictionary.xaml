@@ -1,0 +1,10 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="DefaultTextColor">White</Color>
+    <SolidColorBrush x:Key="DefaultTextColorBrush" Color="{ThemeResource DefaultTextColor}"/>
+
+    <Color x:Key="DarkBackground">#1F1F1F</Color>
+    <SolidColorBrush x:Key="WinDark" Color="{StaticResource DarkBackground}"/>
+</ResourceDictionary>
