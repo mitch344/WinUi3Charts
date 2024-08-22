@@ -21,7 +21,7 @@
     <!-- Package Metadata -->
     <PackageProjectUrl>https://bytesculptorstudios.com/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mitch344/WinUi3Charts</RepositoryUrl>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>©ByteSculptorStudios LLC</Copyright>
     <Title>WinUi3Charts</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -30,20 +30,14 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <!--
-    <None Include="..\PACKAGE_ICON.png">
+    <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    -->
   </ItemGroup>
 
   <!-- XAML files -->
